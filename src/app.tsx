@@ -1,8 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
 import Index from './pages/index'
-
-import counterStore from './store/counter'
+import store from './store'
 
 import './app.scss'
 import 'taro-ui/dist/style/index.scss'
@@ -13,24 +12,12 @@ import 'taro-ui/dist/style/index.scss'
 //   require('nerv-devtools')
 // }
 
-const store = {
-  counterStore
-}
-
 class App extends Component {
-
-  /**
-   * 指定config的类型声明为: Taro.Config
-   *
-   * 由于 typescript 对于 object 类型推导只能推出 Key 的基本类型
-   * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
-   * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
-   */
   config: Config = {
     pages: [
       'pages/index/index',
       'pages/discovery/index',
-      'pages/more/index'
+      'pages/mine/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -48,14 +35,13 @@ class App extends Component {
         text: "",
         iconPath: "./assets/images/tab-bar/home.png",
         selectedIconPath: "./assets/images/tab-bar/home_focus.png"
-      },{
+      }, {
         pagePath: "pages/discovery/index",
         text: "",
         iconPath: "./assets/images/tab-bar/discovery.png",
         selectedIconPath: "./assets/images/tab-bar/discovery_focus.png"
-      }, 
-      {
-        pagePath: "pages/more/index",
+      }, {
+        pagePath: "pages/mine/index",
         text: "",
         iconPath: "./assets/images/tab-bar/my.png",
         selectedIconPath: "./assets/images/tab-bar/my_focus.png"
@@ -71,8 +57,6 @@ class App extends Component {
 
   componentDidCatchError () {}
 
-  // 在 App 类中的 render() 函数没有实际作用
-  // 请勿修改此函数
   render () {
     return (
       <Provider store={store}>

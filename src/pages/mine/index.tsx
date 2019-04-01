@@ -4,18 +4,18 @@ import { View, Text } from '@tarojs/components'
 
 import './index.scss'
 
-class Discovery extends Component {
+class Mine extends Component {
   config: Config = {
-    navigationBarTitleText: '发现'
+    navigationBarTitleText: '我的'
   }
 
   render () {
     return (
-      <View className='discovery'>
-        <Text>发现</Text>
+      <View className='mine'>
+        <Text>我的</Text>
       </View>
     )
   }
 }
 
-export default Discovery  as ComponentType
+export default Mine  as ComponentType
