@@ -5,6 +5,7 @@ import Index from './pages/index'
 import counterStore from './store/counter'
 
 import './app.scss'
+import 'taro-ui/dist/style/index.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -27,13 +28,38 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/discovery/index',
+      'pages/more/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: "#626567",
+      selectedColor: "#2A8CE5",
+      backgroundColor: "#FBFBFB",
+      borderStyle: "white",
+      list: [{
+        pagePath: "pages/index/index",
+        text: "",
+        iconPath: "./assets/images/tab-bar/home.png",
+        selectedIconPath: "./assets/images/tab-bar/home_focus.png"
+      },{
+        pagePath: "pages/discovery/index",
+        text: "",
+        iconPath: "./assets/images/tab-bar/discovery.png",
+        selectedIconPath: "./assets/images/tab-bar/discovery_focus.png"
+      }, 
+      {
+        pagePath: "pages/more/index",
+        text: "",
+        iconPath: "./assets/images/tab-bar/my.png",
+        selectedIconPath: "./assets/images/tab-bar/my_focus.png"
+      }]
     }
   }
 

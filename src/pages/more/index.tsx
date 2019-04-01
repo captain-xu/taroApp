@@ -52,7 +52,7 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>首页</Text>
+        <Text>更多</Text>
       </View>
     )
   }
