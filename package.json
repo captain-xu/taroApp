@@ -33,7 +33,6 @@
     "@tarojs/taro-swan": "1.2.22",
     "@tarojs/taro-tt": "1.2.22",
     "@tarojs/taro-weapp": "1.2.22",
-    "global": "^4.3.2",
     "mobx": "4.8.0",
     "nerv-devtools": "^1.3.9",
     "nervjs": "^1.3.9",
