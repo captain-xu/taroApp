@@ -2,6 +2,7 @@ import { ComponentType } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import { observer, inject } from '@tarojs/mobx'
+import { wx } from 'global';
 
 import './index.scss'
 
@@ -22,7 +23,9 @@ class Index extends Component<{}, IndexProps> {
     console.log('componentWillReact')
   }
 
-  componentDidMount () { }
+  componentDidMount () {
+    console.log(wx.canIUse('openBluetoothAdapter'))
+  }
 
   componentWillUnmount () { }
 

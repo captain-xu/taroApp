@@ -10,6 +10,7 @@ declare module "*.less";
 declare module "*.scss";
 declare module "*.sass";
 declare module "*.styl";
+declare let wx: any;
 
 declare global {
   namespace JSX {
