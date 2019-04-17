@@ -1,6 +1,12 @@
 import { ComponentType } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import {
+  View,
+  Text,
+  Swiper,
+  SwiperItem,
+  Image
+} from '@tarojs/components'
 import { observer, inject } from '@tarojs/mobx'
 
 import './index.scss'
@@ -33,7 +39,23 @@ class Index extends Component<{}, IndexProps> {
   render () {
     return (
       <View className='index'>
-        <Text>首页</Text>
+        <Swiper
+          indicatorColor='#999'
+          indicatorActiveColor='#333'
+          circular
+          indicatorDots
+          autoplay
+        >
+          <SwiperItem>
+            <Image lazyLoad src="http://img3.imgtn.bdimg.com/it/u=2579235386,3504036083&fm=26&gp=0.jpg" className='swiperItem' />
+          </SwiperItem>
+          <SwiperItem>
+            <Image lazyLoad src="http://img2.imgtn.bdimg.com/it/u=236991697,603991298&fm=214&gp=0.jpg" className='swiperItem' />
+          </SwiperItem>
+          <SwiperItem>
+            <Image lazyLoad src="http://img.aiimg.com/uploads/allimg/150126/1-150126223049.jpg" className='swiperItem' />
+          </SwiperItem>
+        </Swiper>
       </View>
     )
   }
