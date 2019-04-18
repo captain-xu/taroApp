@@ -46,7 +46,11 @@ class Index extends Component<{}, IndexProps> {
           indicatorDots
           autoplay
         >
-          <SwiperItem>
+          <SwiperItem onClick={() => {
+            Taro.navigateTo({
+              url: '/pages/home/detail/index'
+            })
+          }}>
             <Image lazyLoad src="http://img3.imgtn.bdimg.com/it/u=2579235386,3504036083&fm=26&gp=0.jpg" className='swiperItem' />
           </SwiperItem>
           <SwiperItem>

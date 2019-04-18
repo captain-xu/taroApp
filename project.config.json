@@ -6,11 +6,16 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
-		"postcss": false,
-		"minified": false,
-		"newFeature": true
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.3.0",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {}
 }

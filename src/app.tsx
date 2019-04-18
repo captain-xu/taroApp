@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
-import Index from './pages/index'
+import Index from './pages/home'
 import store from './store'
 
 import './app.scss'
@@ -15,7 +15,8 @@ import 'taro-ui/dist/style/index.scss'
 class App extends Component {
   config: Config = {
     pages: [
-      'pages/index/index',
+      'pages/home/index',
+      'pages/home/detail/index',
       'pages/discovery/index',
       'pages/mine/index'
     ],
@@ -31,7 +32,7 @@ class App extends Component {
       backgroundColor: "#FBFBFB",
       borderStyle: "white",
       list: [{
-        pagePath: "pages/index/index",
+        pagePath: "pages/home/index",
         text: "",
         iconPath: "./assets/images/tab-bar/home.png",
         selectedIconPath: "./assets/images/tab-bar/home_focus.png"
